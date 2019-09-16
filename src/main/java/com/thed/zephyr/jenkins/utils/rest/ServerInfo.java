@@ -84,7 +84,7 @@ public class ServerInfo {
 							.getJSONObject(0).getString("name").trim();
 
 					if (userRole.equalsIgnoreCase("manager")
-							|| userRole.equalsIgnoreCase("lead")) {
+							|| userRole.contains("admin")) {
 						statusMap.clear();
 						statusMap.put(true, VALID_USER_ROLE);
 					} else {
