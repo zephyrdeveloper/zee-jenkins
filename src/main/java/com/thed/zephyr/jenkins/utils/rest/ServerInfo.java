@@ -87,6 +87,11 @@ public class ServerInfo {
 							|| userRole.equalsIgnoreCase("lead")) {
 						statusMap.clear();
 						statusMap.put(true, VALID_USER_ROLE);
+					} else if (userRole.contains("manager")	
+							|| userRole.contains("Admin")) {
+						statusMap.clear();
+						statusMap.put(true, VALID_USER_ROLE);
+						 
 					} else {
 						statusMap.clear();
 						statusMap.put(false, INVALID_USER_ROLE);
